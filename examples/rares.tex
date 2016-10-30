@@ -1,0 +1,146 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                           % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Rares}{Cosma}
+\title{DevOps / SRE}                            % optional, remove / comment the line if not wanted
+\address{5A Ion Agirbiceanu Sq.}{400477 Cluj-Napoca Romania}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+40~7210~72737}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{rares@getbetter.ro}                               % optional, remove / comment the line if not wanted
+\social[linkedin]{rarescosma}                        % optional, remove / comment the line if not wanted
+\social[github]{rarescosma}                              % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Experience}
+\subsection{Employment}
+\cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, peformance, fault tolerance and component decoupling.\newline{}%
+Detailed achievements:%
+\begin{itemize}%
+\item Designed and implemented an \textit{"infrastructure as code"} platform on top of AWS CloudFormation and SaltStack, leading to full parity between lower environments and production, increasing transparency and control reducing the potential for human errors;
+\item Reduced the website time-to-first-byte by \textit{an order of magnitude} by designing and implementing an async cache system, leading to a \textit{80\% reduction} of used AWS resources;
+\item Centralized logging and metrics gathering by deploying the ELK stack, leading to invaluable insights into application- and platform-level performance and improved alerts;
+\item Maintained and improved the continuous delivery pipeline and end-to-end test suites, leading to faster, safer deploys \& more meaningful code reviews;
+\item Led the effort to increase the team's code quality by promoting the values of clean, decoupled, interface-based design, evangelizing the functional programming paradigm and automating code analysis.
+\item Principal contributions to existing and new system components:
+  \begin{itemize}
+  \item Designed \& implemented an image resize service using Node.js;
+  \item Ported a template rendering service from Node.js to Scala, leading to hassle-free upstream merges of the UI layer;
+  \item Re-designed and refactored the product database component into a standalone API, leading to <60s delay on product announcements (down from 20+ minutes);
+  \item Designed and implemented a PHP framework for functional composition of models from multiple external APIs.
+  \end{itemize}
+\end{itemize}
+\textbf{Technologies}: Linux, AWS, SaltStack, Jenkins, ELK, Bash, Python, Scala, Node.js, PHP, HHVM, Redis, Docker, Vagrant, OpenVPN, VPC Peering, Cucumber}
+
+\cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}%
+Notable achievements:%
+\begin{itemize}%
+\item Introduced an automated documentation process by implementing a custom PHP parser (in python), leading to less time spent updating the GitHub wiki.
+\item Implemented a Node.js acceptancce test framework on top of Travis CI
+\item Added a fragment-caching layer to our framework and used it to reduce the response time of an "elephant"-traffic website from 3000ms to <800ms.
+\item Introduced a declarative extension which allows attaching rich metadata to any \mbox{WordPress} entity. (much like ACF, but faster)
+\end{itemize}
+\textbf{Technologies}: PHP, Node.js, Python, Bash, Grunt, Sass, HAML, Coffeescript, WordPress}
+
+\cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. JavaScript ninja.\newline{}%
+Notable Achievements:%
+\begin{itemize}%
+\item Remodeled the visual identity and behaviour for the website of an acquired high-profile corporate client;
+\item Introduced and deployed \textit{Less} as a styles pre-processor to promote code reuse.
+\end{itemize}
+\textbf{Technologies}: JavaScript, jQuery, HTML5, Less, CSS3, Adobe Photoshop, XSLT}
+
+\cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.\newline{}%
+Notable Achievements:%
+\begin{itemize}%
+\item Quickly acquired skills for PSD to HTML/CSS coding, CMS templating and working with JavaScript frameworks;
+\item Implemented a tiny PHP framework for easier WordPress integration.
+\end{itemize}
+\textbf{Technologies}: PHP, WordPress, Drupal, Magento, JavaScript, jQuery, Mootools, CSS}
+
+\subsection{Freelance}
+\cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.\newline{}%
+Assignments included:%
+\begin{itemize}%
+\item WordPress theming and CMS integration;
+\item Payment gateway integration:
+\item Ecommerce systems based on WordPress \& Magento
+\end{itemize}
+\textbf{Technologies}: PHP, Python, WordPress, Magento, JavaScript, Node.js, jQuery, Paypal}
+
+
+\subsection{University Projects}
+\cventry{2006--2008}{Technical University of Cluj-Napoca}{}{}{}{
+\begin{itemize}
+\item Multithreaded file transfer protocol \& UI
+\item Lempel-Ziv-Welch compression tool
+\item DPSK Modulator with Nyquist filtering
+\item IPv4 to IPv6 gateway for Asterisk PBX
+\end{itemize}
+\textbf{Technologies}: Linux, Bash, Java, C++, C
+}
+
+\section{Education}
+\cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{}  % arguments 3 to 6 can be left empty
+\cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}  % arguments 3 to 6 can be left empty
+\cventry{2003--2008}{Diploma Eng., Telecommunications}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{Specialization: Digital Networks}  % arguments 3 to 6 can be left empty
+\cventry{1999--2003}{Baccalaureate}{"George Cosbuc" National College}{Cluj-Napoca}{\textit{9.35}}{Main Subjects: Mathematics, Physics, Information Technology}
+
+\section{Awards \& Achievments}
+\subsection{Publications}
+\cvitem{Title}{\emph{Measurement-Based Analysis of the
+Performance of several Wireless Technologies}}
+\cvitem{Conference}{LANMAN 2008}
+\cvitem{Journal}{\protect\httplink[IEEE Xplore]{ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4675830}}
+\subsection{National Olympiads}
+\cvitem{Years}{1998-2001}
+\cvitem{Subject}{Chemistry}
+\cvitem{Awards}{Constanta 2001 - 3rd Prize; Galati 1999 - Mention, Brasov 1998 - 2nd Prize}
+
+\section{Languages}
+\cvitemwithcomment{Romanian}{native language}{}
+\cvitemwithcomment{English}{full professional proficiency}{ILR scale}
+\cvitemwithcomment{German}{limited working proficiency}{"Deuthsches Sprachdimplom der KMK" - May 2004}
+
+\end{document}
+
+%% end of file `rares.tex'.
