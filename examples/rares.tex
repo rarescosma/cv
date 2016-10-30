@@ -12,11 +12,10 @@
 \moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 \moderncvcolor{burgundy}                           % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 %\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 %\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
@@ -47,15 +46,16 @@
 %            content
 %----------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Experience}
+
 \subsection{Employment}
-\cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, peformance, fault tolerance and component decoupling.\newline{}%
-Detailed achievements:%
-\begin{itemize}%
+
+\cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, peformance, fault tolerance and component decoupling.\newline{}
+Detailed achievements:
+\begin{itemize}
 \item Designed and implemented an \textit{"infrastructure as code"} platform on top of AWS CloudFormation and SaltStack, leading to full parity between lower environments and production, increasing transparency and control reducing the potential for human errors;
 \item Reduced the website time-to-first-byte by \textit{an order of magnitude} by designing and implementing an async cache system, leading to a \textit{80\% reduction} of used AWS resources;
 \item Centralized logging and metrics gathering by deploying the ELK stack, leading to invaluable insights into application- and platform-level performance and improved alerts;
@@ -71,9 +71,9 @@ Detailed achievements:%
 \end{itemize}
 \textbf{Technologies}: Linux, AWS, SaltStack, Jenkins, ELK, Bash, Python, Scala, Node.js, PHP, HHVM, Redis, Docker, Vagrant, OpenVPN, VPC Peering, Cucumber}
 
-\cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}%
-Notable achievements:%
-\begin{itemize}%
+\cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}
+Notable achievements:
+\begin{itemize}
 \item Introduced an automated documentation process by implementing a custom PHP parser (in python), leading to less time spent updating the GitHub wiki.
 \item Implemented a Node.js acceptancce test framework on top of Travis CI
 \item Added a fragment-caching layer to our framework and used it to reduce the response time of an "elephant"-traffic website from 3000ms to <800ms.
@@ -81,51 +81,73 @@ Notable achievements:%
 \end{itemize}
 \textbf{Technologies}: PHP, Node.js, Python, Bash, Grunt, Sass, HAML, Coffeescript, WordPress}
 
-\cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. JavaScript ninja.\newline{}%
-Notable Achievements:%
-\begin{itemize}%
+\cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. JavaScript ninja.\newline{}
+Notable Achievements:
+\begin{itemize}
 \item Remodeled the visual identity and behaviour for the website of an acquired high-profile corporate client;
 \item Introduced and deployed \textit{Less} as a styles pre-processor to promote code reuse.
 \end{itemize}
 \textbf{Technologies}: JavaScript, jQuery, HTML5, Less, CSS3, Adobe Photoshop, XSLT}
 
-\cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.\newline{}%
-Notable Achievements:%
-\begin{itemize}%
+\cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.\newline{}
+Notable Achievements:
+\begin{itemize}
 \item Quickly acquired skills for PSD to HTML/CSS coding, CMS templating and working with JavaScript frameworks;
 \item Implemented a tiny PHP framework for easier WordPress integration.
 \end{itemize}
 \textbf{Technologies}: PHP, WordPress, Drupal, Magento, JavaScript, jQuery, Mootools, CSS}
 
+% \hfill\break
 \subsection{Freelance}
-\cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.\newline{}%
-Assignments included:%
-\begin{itemize}%
+
+\cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.\newline{}
+Assignments included:
+\begin{itemize}
 \item WordPress theming and CMS integration;
 \item Payment gateway integration:
 \item Ecommerce systems based on WordPress \& Magento
 \end{itemize}
 \textbf{Technologies}: PHP, Python, WordPress, Magento, JavaScript, Node.js, jQuery, Paypal}
 
+\cventry{2005--Present}{Linux System Administrator}{}{}{}{After my first encounter with Slackware in highschool, I fell in love with the free software world and never stopped learning about the Linux ecosystem. I currently maintain a VPS fleet across multiple cloud providers, using modern tools and automation to ensure fault tolerance, high availability and low operational costs.\newline{}
+\textbf{Technologies}: Kubernetes, Docker, Jenkins, Shell scripting, Python, MySQL}
 
+% \hfill\break
 \subsection{University Projects}
-\cventry{2006--2008}{Technical University of Cluj-Napoca}{}{}{}{
+
+\cventry{2005--2008}{Technical University of Cluj-Napoca}{}{}{}{
 \begin{itemize}
 \item Multithreaded file transfer protocol \& UI
 \item Lempel-Ziv-Welch compression tool
 \item DPSK Modulator with Nyquist filtering
 \item IPv4 to IPv6 gateway for Asterisk PBX
 \end{itemize}
-\textbf{Technologies}: Linux, Bash, Java, C++, C
-}
+\textbf{Technologies}: Linux, Bash, Java, C++, C}
 
 \section{Education}
-\cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{}  % arguments 3 to 6 can be left empty
-\cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}  % arguments 3 to 6 can be left empty
-\cventry{2003--2008}{Diploma Eng., Telecommunications}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{Specialization: Digital Networks}  % arguments 3 to 6 can be left empty
+\cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{}
+\cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}
+\cventry{2003--2008}{Diploma Eng., Telecommunications}{Universitatea Tehnica din Cluj-Napoca}{}{\textit{10}}{Specialization: Digital Networks}
 \cventry{1999--2003}{Baccalaureate}{"George Cosbuc" National College}{Cluj-Napoca}{\textit{9.35}}{Main Subjects: Mathematics, Physics, Information Technology}
 
-\section{Awards \& Achievments}
+
+\subsection{Independent coursework}
+\cventry{2016.09}{Scalable Microservices with Kubernetes}{Udacity}{}{}{}
+\cventry{2016.08}{React.js Fundamentals}{React.js Program}{}{}{}
+
+
+\subsection{Independent coursework - Coursera}
+\cventry{2013.10}{Algorithms: Design and Analysis, Part 2}{Stanford University}{}{Grade: \textit{91.5\%}}{}
+\cventry{2013.09}{Startup Engineering}{Stanford University}{}{Grade: \textit{83.8\%}}{}
+\cventry{2013.07}{Introduction to Systematic Program Design - Part 1}{The University of British Columbia}{}{Grade: \textit{98.3\% with Distinction}}{}
+\cventry{2013.05}{Functional Programming Principles in Scala}{École Polytechnique Fédérale de Lausanne}{}{Grade: \textit{83.3\% with Distinction}}{}
+\cventry{2012.11}{Introduction to Mathematical Thinking}{Stanford University}{}{Grade: \textit{88.5\%}}{}
+\cventry{2012.04}{Algorithms: Design and Analysis, Part 1}{Stanford University}{}{Grade: \textit{91.0\%}}{}
+
+
+
+
+\section{Awards \& achievments}
 \subsection{Publications}
 \cvitem{Title}{\emph{Measurement-Based Analysis of the
 Performance of several Wireless Technologies}}
@@ -140,6 +162,14 @@ Performance of several Wireless Technologies}}
 \cvitemwithcomment{Romanian}{native language}{}
 \cvitemwithcomment{English}{full professional proficiency}{ILR scale}
 \cvitemwithcomment{German}{limited working proficiency}{"Deuthsches Sprachdimplom der KMK" - May 2004}
+
+\section{Computer skills}
+\cvdoubleitem{Linux Distros}{Apt: Debian, Ubuntu; \newline{}Rpm: CentOS, RHEL}{Virtualization}{Kubernetes, Docker, LXC, Juju, OpenVZ, VMware, KVM}
+\cvdoubleitem{Provisioning}{SaltStack, Chef, Puppet, Ansible}{Orchestration}{AWS, Azure, GCP}
+\cvdoubleitem{Monitoring}{ELK, Prometheus, Grafana, \newline{}InfluxDB, Ganglia, Monit}{CI/CD}{Jenkins, PHPUnit, TravisCI, Mocha, Cucumber, Chai}
+\cvdoubleitem{Programming Languages}{Python, PHP, Scala, Node.js, Ruby, Go}{Version Control}{Git, Github, Gitlab, Mercurial, SVN}
+\cvdoubleitem{Databases}{MySQL, MongoDB, DynamoDB, PostgreSQL}{Networking}{OpenVPN, iptables, VPC peering}
+\cvdoubleitem{Message Queues}{Redis, ZeroMQ, Kafka, SQS}{}{}
 
 \end{document}
 
