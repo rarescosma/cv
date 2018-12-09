@@ -1,0 +1,146 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[12pt,legalpaper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                            % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                           % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% \nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.80]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Rares}{Cosma}
+\title{Senior Software Engineer / SRE}                            % optional, remove / comment the line if not wanted
+\address{4 Atlasgatan}{11320 Stockholm Sweden}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\phone[mobile]{+46~728~558122}  % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+\email{rares@getbetter.ro}                               % optional, remove / comment the line if not wanted
+\social[linkedin]{rarescosma}                        % optional, remove / comment the line if not wanted
+\social[github]{rarescosma}                              % optional, remove / comment the line if not wanted
+\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+% \quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Experience}
+
+\cventry{2017.07--Present}{Senior Software Engineer}{Klarna Bank}{Stockholm}{Sweden}{Part of the Cloud Productivity team at Klarna, I'm developing and overseeing software that's used by hundreds of fellow engineers to deploy, monitor and get insights into production systems.\newline{}
+Contributions:
+\begin{itemize}
+\item Building a real-time service \& team information dashboard with Python backend and React/Redux frontend, interfacing with 15+ different systems for data acquisition;
+\item Building a deployment automation service targeting redundant, replaceable Kubernetes clusters on AWS;
+\item Building a Kubernetes cluster orchestration tool targeting AWS \& handling cluster lifecycle, plugin groups and self-checks;
+\item Building an in-house Prometheus / Alertmanager automated deployment and configuration management solution based on a monorepo and deployed on Kubernetes that is now used by 80+ teams;
+\item Building a merge bot for the Prometheus / Alertmanager solution;
+\item Contributing to an in-house deployment automation service targeting Docker on AWS;
+\end{itemize}
+\textbf{Technologies}: Python, Postgres, Prometheus, Kubernetes, Kops, Docker, React/Redux, Ansible}
+
+\cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, performance, fault tolerance, and component decoupling.\newline{}
+Contributions:
+\begin{itemize}
+\item Designed and implemented an \textit{"infrastructure as code"} platform on top of AWS Cloud\-Formation and SaltStack, leading to full parity between lower environments and production, increasing transparency, control, and reducing the potential for human errors;
+\item Reduced the website time-to-first-byte by \textit{an order of magnitude} by designing and implementing an async cache system, leading to a \textit{80\% reduction} of used AWS resources;
+\item Centralized logging and metrics gathering by deploying the ELK stack, leading to invaluable insights into application and platform level performance and improved alerts;
+\item Increased the team's code quality by promoting the values of clean, functional, decoupled, interface-based development and automating code analysis.
+\end{itemize}
+\textbf{Technologies}: Linux, AWS, SaltStack, Jenkins, ELK, Bash, Python, Scala, Node.js, PHP, HHVM, Redis, Docker, Vagrant, OpenVPN, VPC Peering, Cucumber}
+
+\cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}
+Notable contributions:
+\begin{itemize}
+\item Introduced an automated documentation process by implementing a custom PHP parser (in python), leading to less time spent updating the GitHub wiki;
+\item Implemented a Node.js acceptancce test framework on top of Travis CI;
+\item Added a fragment-caching layer to our framework and used it to reduce the response time of an "elephant"-traffic website from 3000ms to <800ms;
+\item Introduced a declarative extension which allows attaching rich metadata to any \mbox{WordPress} entity, with focus on performance.
+\end{itemize}
+\textbf{Technologies}: Python, PHP, Node.js, Bash, Grunt, Sass, HAML, Coffeescript, WordPress}
+
+\cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. jQuery madness.
+\newline{}
+\textbf{Technologies}: JavaScript, jQuery, HTML5, Less, CSS3, Adobe Photoshop, XSLT}
+
+\cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.
+\newline{}
+\textbf{Technologies}: PHP, WordPress, Drupal, Magento, JavaScript, jQuery, Mootools, CSS}
+
+% \hfill\break
+\subsection{Freelance}
+
+\cventry{2005--Present}{Linux System Administrator}{}{}{}{After my first encounter with Slackware in highschool, I fell in love with the free software world and never stopped learning about the Linux ecosystem. I currently maintain a VPS fleet across multiple cloud providers, using modern tools and automation to improve fault tolerance, availability and operational costs.\newline{}
+\textbf{Technologies}: Kubernetes, Docker, Jenkins, Shell scripting, Python, Virtualization}
+
+\cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.
+\newline{}
+\textbf{Technologies}: PHP, Python, WordPress, Magento, JavaScript, Node.js, jQuery, Paypal}
+
+\section{Education}
+\cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Technical University of Cluj-Napoca}{}{}{Thesis score: 10/10}
+\cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}
+\cventry{2003--2008}{Diploma Eng., Telecommunications}{Technical University of Cluj-Napoca}{}{}{Diploma score: 10/10\newline{}Specialization: Digital Networks}
+\cventry{1999--2003}{Baccalaureate}{"George Cosbuc" National College}{Cluj-Napoca}{}{Score: 9.35/10\newline{}Main Subjects: Mathematics, Physics, Information Technology}
+
+\subsection{Independent coursework - Coursera}
+\cventry{2013.10}{Algorithms: Design and Analysis, Part 2}{Stanford University}{}{Grade: \textit{91.5\%}}{}
+\cventry{2013.09}{Startup Engineering}{Stanford University}{}{Grade: \textit{83.8\%}}{}
+\cventry{2013.07}{Introduction to Systematic Program Design - Part 1}{The University of British Columbia}{}{Grade: \textit{98.3\% with Distinction}}{}
+\cventry{2013.05}{Functional Programming Principles in Scala}{École Polytechnique Fédérale de Lausanne}{}{Grade: \textit{83.3\% with Distinction}}{}
+\cventry{2012.11}{Introduction to Mathematical Thinking}{Stanford University}{}{Grade: \textit{88.5\%}}{}
+\cventry{2012.04}{Algorithms: Design and Analysis, Part 1}{Stanford University}{}{Grade: \textit{91.0\%}}{}
+
+
+\section{Awards \& achievments}
+\subsection{Publications}
+\cvitem{Title}{\emph{Measurement-Based Analysis of the
+Performance of several Wireless Technologies}}
+\cvitem{Conference}{LANMAN 2008}
+\cvitem{Journal}{\protect\httplink[IEEE Xplore]{ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4675830}}
+\subsection{National Olympiads}
+\cvitem{Years}{1998-2001}
+\cvitem{Subject}{Chemistry}
+\cvitem{Awards}{Constanta 2001 - 3rd Prize; Galati 1999 - Mention, Brasov 1998 - 2nd Prize}
+
+\section{Languages}
+\cvitemwithcomment{Romanian}{native language}{}
+\cvitemwithcomment{English}{full professional proficiency}{ILR scale}
+\cvitemwithcomment{German}{limited working proficiency}{"Deuthsches Sprachdimplom der KMK" - May 2004}
+
+\section{Computer skills}
+\cvdoubleitem{Programming Languages}{Python, PHP, Scala, Node.js}{Linux Distros}{Apt: Debian, Ubuntu \newline Rpm: CentOS, RHEL}
+\cvdoubleitem{Provisioning}{SaltStack, Ansible}{Orchestration}{AWS, GCP}
+\cvdoubleitem{Monitoring}{ELK Stack, Prometheus, Grafana}{CI/CD}{Jenkins, TravisCI, Concourse}
+\cvitem{Virtualization}{Kubernetes, Docker, LXC}
+\cvitem{Service Configuration}{\textit{Databases:} PostgreSQL, MySQL; \textit{Webservers:} Apache, nginx; \textit{Message Queues:} Redis, ZeroMQ, Kafka, SQS}
+\cvitem{Networking}{TCP/IP stack, routing, OpenVPN, iptables, ufw, VPC Peering}
+\cvitem{Monitoring}{ELK Stack, Prometheus, Alertmanager}
+
+\end{document}
+
+%% end of file `rares.tex'.
