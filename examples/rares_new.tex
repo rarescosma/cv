@@ -47,99 +47,117 @@
 %----------------------------------------------------------------------------------
 \begin{document}
 %-----       resume       ---------------------------------------------------------
-\makecvtitle
+    \makecvtitle
 
-\section{Experience}
 
-\cventry{2017.07--Present}{Senior Software Engineer}{Klarna Bank}{Stockholm}{Sweden}{Part of the Cloud Productivity team at Klarna, I'm developing and overseeing software that's used by hundreds of fellow engineers to deploy, monitor and get insights into production systems.\newline{}
-Contributions:
-\begin{itemize}
-\item Building a real-time service \& team information dashboard with Python backend and React/Redux frontend, interfacing with 15+ different systems for data acquisition;
-\item Building a deployment automation service targeting redundant, replaceable Kubernetes clusters on AWS;
-\item Building a Kubernetes cluster orchestration tool targeting AWS \& handling cluster lifecycle, plugin groups and self-checks;
-\item Building an in-house Prometheus / Alertmanager automated deployment and configuration management solution based on a monorepo and deployed on Kubernetes that is now used by 80+ teams;
-\item Building a merge bot for the Prometheus / Alertmanager solution;
-\item Contributing to an in-house deployment automation service targeting Docker on AWS;
-\end{itemize}
-\textbf{Technologies}: Python, Postgres, Prometheus, Kubernetes, Kops, Docker, React/Redux, Ansible}
+    \section{Experience}\label{sec:experience}
 
-\cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, performance, fault tolerance, and component decoupling.\newline{}
-Contributions:
-\begin{itemize}
-\item Designed and implemented an \textit{"infrastructure as code"} platform on top of AWS Cloud\-Formation and SaltStack, leading to full parity between lower environments and production, increasing transparency, control, and reducing the potential for human errors;
-\item Reduced the website time-to-first-byte by \textit{an order of magnitude} by designing and implementing an async cache system, leading to a \textit{80\% reduction} of used AWS resources;
-\item Centralized logging and metrics gathering by deploying the ELK stack, leading to invaluable insights into application and platform level performance and improved alerts;
-\item Increased the team's code quality by promoting the values of clean, functional, decoupled, interface-based development and automating code analysis.
-\end{itemize}
-\textbf{Technologies}: Linux, AWS, SaltStack, Jenkins, ELK, Bash, Python, Scala, Node.js, PHP, HHVM, Redis, Docker, Vagrant, OpenVPN, VPC Peering, Cucumber}
+    \cventry{2019.08--2021.11}{Senior Software Engineer}{Klarna Bank}{Stockholm}{Sweden}{Part of the Data Processing Frameworks team, I've developed and overseen robust data frameworks used by Data Engineers from multiple BI teams to ship ETL pipelines by simply writing SQL code. Our systems were interfacing with Redshift, EMR, S3 \& Kafka.\newline{}
+    Contributions:
+        \begin{itemize}
+            \item Led the effort to centralize the entire documentation for Klarna's Data Domain by fully automating an mkdocs solution - got dynamically populated datasets, DAGs, user guides and architecture documentation all in one place;
+            \item Contributed to an Airflow-based solution for packaging, scheduling and monitoring ETL tranformations;
+            \item Significantly reduced the error surface of managing Kubernetes (EKS) clusters by implementing hand-crafted Python tooling and extracting all hardcoded values into DRY configuration files;
+            \item Reduced the time to deploy DAG changes into production from ~10 minutes to <10 seconds by implementing a custom push-based solution for Airflow on Kubernetes;
+        \end{itemize}
+        \textbf{Technologies}: Python, Kubernetes, Terraform, Docker, Airflow, Jenkins, mkdocs}
 
-\cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}
-Notable contributions:
-\begin{itemize}
-\item Introduced an automated documentation process by implementing a custom PHP parser (in python), leading to less time spent updating the GitHub wiki;
-\item Implemented a Node.js acceptancce test framework on top of Travis CI;
-\item Added a fragment-caching layer to our framework and used it to reduce the response time of an "elephant"-traffic website from 3000ms to <800ms;
-\item Introduced a declarative extension which allows attaching rich metadata to any \mbox{WordPress} entity, with focus on performance.
-\end{itemize}
-\textbf{Technologies}: Python, PHP, Node.js, Bash, Grunt, Sass, HAML, Coffeescript, WordPress}
+    \cvitem{2017.07--2019.08}
+    {\begin{minipage}[t]{\linewidth}\small{Part of the Cloud Productivity team at Klarna, I've developed and overseen software used by hundreds of fellow engineers to deploy, monitor and get insights into production systems.\newline{}
+    Contributions:
+        \begin{itemize}
+            \item Built a real-time service \& team information dashboard with Python backend and React/Redux frontend, interfacing with 15+ different systems for data acquisition;
+            \item Built a deployment automation service targeting redundant, replaceable Kubernetes clusters on AWS;
+            \item Built a Kubernetes cluster orchestration tool targeting AWS \& handling cluster lifecycle, plugin groups and self-checks;
+            \item Built an in-house monitoring solution based on Prometheus \& Alertmanager and scaled its usage to 100+ teams across different domains in the company;
+            \item Built a merge bot for the Prometheus / Alertmanager solution;
+            \item Contributed to an in-house deployment automation service targeting Docker on AWS;
+        \end{itemize}
+        \textbf{Technologies}: Python, Postgres, Prometheus, Kubernetes, Kops, Docker, React, Ansible\newline}\end{minipage}}
 
-\cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. jQuery madness.
-\newline{}
-\textbf{Technologies}: JavaScript, jQuery, HTML5, Less, CSS3, Adobe Photoshop, XSLT}
+    \cventry{2014--2016}{DevOps / Site Reliability Engineer}{Sony Mobile}{Lund}{Sweden}{Led the production platform and microservice development of an "elephant"-traffic website. Responsibilites included system architecture, orchestration and provisioning with a focus on site reliability, performance, fault tolerance, and component decoupling.\newline{}
+    Contributions:
+        \begin{itemize}
+            \item Designed and implemented an \textit{"infrastructure as code"} platform on top of AWS Cloud\-Formation and SaltStack, leading to full parity between lower environments and production, increasing transparency, control, and reducing the potential for human errors;
+            \item Reduced the website time-to-first-byte by \textit{an order of magnitude} by designing and implementing an async cache system, leading to a \textit{80\% reduction} of used AWS resources;
+            \item Centralized logging and metrics gathering by deploying the ELK stack, leading to invaluable insights into application and platform level performance and improved alerts;
+            \item Increased the team's code quality by promoting the values of clean, functional, decoupled, interface-based development and automating code analysis.
+        \end{itemize}
+        \textbf{Technologies}: Linux, AWS, SaltStack, Jenkins, ELK, Bash, Python, Scala, Node.js, PHP, HHVM, Redis, Docker, Vagrant, OpenVPN, VPC Peering, Cucumber}
 
-\cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.
-\newline{}
-\textbf{Technologies}: PHP, WordPress, Drupal, Magento, JavaScript, jQuery, Mootools, CSS}
+    \cventry{2012--2014}{Software Engineer}{W3Edge}{Boston, MA}{United States of America}{Developed the core of a complex WordPress theming framework and optimized the performance of high traffic client websites.\newline{}
+    Notable contributions:
+        \begin{itemize}
+            \item Introduced an automated documentation process by implementing a custom PHP parser (in python), leading to less time spent updating the GitHub wiki;
+            \item Implemented a Node.js acceptancce test framework on top of Travis CI;
+            \item Added a fragment-caching layer to our framework and used it to reduce the response time of an ``elephant''-traffic website from 3000ms to <800ms;
+            \item Introduced a declarative extension which allows attaching rich metadata to any \mbox{WordPress} entity, with focus on performance.
+        \end{itemize}
+        \textbf{Technologies}: Python, PHP, Node.js, Bash, Grunt, Sass, HAML, Coffeescript, WordPress}
+
+    \cventry{2011--2012}{Frontend Engineer}{Upaya SRL / Addition Denmark}{Cluj-Napoca}{Romania}{Responsive, mobile-ready UI/UX coding for client websites. jQuery madness.
+    \newline{}
+    \textbf{Technologies}: JavaScript, jQuery, HTML5, Less, CSS3, Adobe Photoshop, XSLT}
+
+    \cventry{2006--2009}{Full Stack Web Developer}{Forward Inc.}{Boston, MA}{United States of America}{PSD to fully functional website coding using a variety of CMS', chiefly WordPress, Drupal \& Magento.
+    \newline{}
+    \textbf{Technologies}: PHP, WordPress, Drupal, Magento, JavaScript, jQuery, Mootools, CSS}
 
 % \hfill\break
-\subsection{Freelance}
 
-\cventry{2005--Present}{Linux System Administrator}{}{}{}{After my first encounter with Slackware in highschool, I fell in love with the free software world and never stopped learning about the Linux ecosystem. I currently maintain a VPS fleet across multiple cloud providers, using modern tools and automation to improve fault tolerance, availability and operational costs.\newline{}
-\textbf{Technologies}: Kubernetes, Docker, Jenkins, Shell scripting, Python, Virtualization}
+    \subsection{Freelance}\label{subsec:freelance}
 
-\cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.
-\newline{}
-\textbf{Technologies}: PHP, Python, WordPress, Magento, JavaScript, Node.js, jQuery, Paypal}
+    \cventry{2005--Present}{Linux System Administrator}{}{}{}{After my first encounter with Slackware in highschool, I fell in love with the free software world and never stopped learning about the Linux ecosystem. I currently maintain a VPS fleet across multiple cloud providers, using modern tools and automation to improve fault tolerance, availability and operational costs.\newline{}
+    \textbf{Technologies}: Kubernetes, Docker, Jenkins, Shell scripting, Python, Virtualization}
 
-\section{Education}
-\cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Technical University of Cluj-Napoca}{}{}{Thesis score: 10/10}
-\cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}
-\cventry{2003--2008}{Diploma Eng., Telecommunications}{Technical University of Cluj-Napoca}{}{}{Diploma score: 10/10\newline{}Specialization: Digital Networks}
-\cventry{1999--2003}{Baccalaureate}{"George Cosbuc" National College}{Cluj-Napoca}{}{Score: 9.35/10\newline{}Main Subjects: Mathematics, Physics, Information Technology}
-
-\subsection{Independent coursework - Coursera}
-\cventry{2013.10}{Algorithms: Design and Analysis, Part 2}{Stanford University}{}{Grade: \textit{91.5\%}}{}
-\cventry{2013.09}{Startup Engineering}{Stanford University}{}{Grade: \textit{83.8\%}}{}
-\cventry{2013.07}{Introduction to Systematic Program Design - Part 1}{The University of British Columbia}{}{Grade: \textit{98.3\% with Distinction}}{}
-\cventry{2013.05}{Functional Programming Principles in Scala}{École Polytechnique Fédérale de Lausanne}{}{Grade: \textit{83.3\% with Distinction}}{}
-\cventry{2012.11}{Introduction to Mathematical Thinking}{Stanford University}{}{Grade: \textit{88.5\%}}{}
-\cventry{2012.04}{Algorithms: Design and Analysis, Part 1}{Stanford University}{}{Grade: \textit{91.0\%}}{}
+    \cventry{2008--2012}{Freelance Web Developer}{Rares Ioan COSMA PFA}{Cluj-Napoca}{Romania}{Full stack web development services for a variety of international clients and web agencies.
+    \newline{}
+    \textbf{Technologies}: PHP, Python, WordPress, Magento, JavaScript, Node.js, jQuery, Paypal}
 
 
-\section{Awards \& achievments}
-\subsection{Publications}
-\cvitem{Title}{\emph{Measurement-Based Analysis of the
-Performance of several Wireless Technologies}}
-\cvitem{Conference}{LANMAN 2008}
-\cvitem{Journal}{\protect\httplink[IEEE Xplore]{ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4675830}}
-\subsection{National Olympiads}
-\cvitem{Years}{1998-2001}
-\cvitem{Subject}{Chemistry}
-\cvitem{Awards}{Constanta 2001 - 3rd Prize; Galati 1999 - Mention, Brasov 1998 - 2nd Prize}
+    \section{Education}
+    \cventry{2008-2010}{MSc. of Telecommunications and Multimedia Technologies}{Technical University of Cluj-Napoca}{}{}{Thesis score: 10/10}
+    \cventry{2008}{Diploma Eng.}{Universitat Politècnica de Catalunya - Department of Computer Architecture}{Barcelona, Spain}{}{Erasmus Mobility for 3 months}
+    \cventry{2003--2008}{Diploma Eng., Telecommunications}{Technical University of Cluj-Napoca}{}{}{Diploma score: 10/10\newline{}Specialization: Digital Networks}
+    \cventry{1999--2003}{Baccalaureate}{"George Cosbuc" National College}{Cluj-Napoca}{}{Score: 9.35/10\newline{}Main Subjects: Mathematics, Physics, Information Technology}
 
-\section{Languages}
-\cvitemwithcomment{Romanian}{native language}{}
-\cvitemwithcomment{English}{full professional proficiency}{ILR scale}
-\cvitemwithcomment{German}{limited working proficiency}{"Deuthsches Sprachdimplom der KMK" - May 2004}
+    \subsection{Independent coursework - Coursera}
+    \cventry{2013.10}{Algorithms: Design and Analysis, Part 2}{Stanford University}{}{Grade: \textit{91.5\%}}{}
+    \cventry{2013.09}{Startup Engineering}{Stanford University}{}{Grade: \textit{83.8\%}}{}
+    \cventry{2013.07}{Introduction to Systematic Program Design - Part 1}{The University of British Columbia}{}{Grade: \textit{98.3\% with Distinction}}{}
+    \cventry{2013.05}{Functional Programming Principles in Scala}{École Polytechnique Fédérale de Lausanne}{}{Grade: \textit{83.3\% with Distinction}}{}
+    \cventry{2012.11}{Introduction to Mathematical Thinking}{Stanford University}{}{Grade: \textit{88.5\%}}{}
+    \cventry{2012.04}{Algorithms: Design and Analysis, Part 1}{Stanford University}{}{Grade: \textit{91.0\%}}{}
 
-\section{Computer skills}
-\cvdoubleitem{Programming Languages}{Python, PHP, Scala, Node.js}{Linux Distros}{Apt: Debian, Ubuntu \newline Rpm: CentOS, RHEL}
-\cvdoubleitem{Provisioning}{SaltStack, Ansible}{Orchestration}{AWS, GCP}
-\cvdoubleitem{Monitoring}{ELK Stack, Prometheus, Grafana}{CI/CD}{Jenkins, TravisCI, Concourse}
-\cvitem{Virtualization}{Kubernetes, Docker, LXC}
-\cvitem{Service Configuration}{\textit{Databases:} PostgreSQL, MySQL; \textit{Webservers:} Apache, nginx; \textit{Message Queues:} Redis, ZeroMQ, Kafka, SQS}
-\cvitem{Networking}{TCP/IP stack, routing, OpenVPN, iptables, ufw, VPC Peering}
-\cvitem{Monitoring}{ELK Stack, Prometheus, Alertmanager}
+
+    \section{Awards \& achievments}
+
+    \subsection{Publications}
+    \cvitem{Title}{\emph{Measurement-Based Analysis of the
+    Performance of several Wireless Technologies}}
+    \cvitem{Conference}{LANMAN 2008}
+    \cvitem{Journal}{\protect\httplink[IEEE Xplore]{ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4675830}}
+
+    \subsection{National Olympiads}
+    \cvitem{Years}{1998-2001}
+    \cvitem{Subject}{Chemistry}
+    \cvitem{Awards}{Constanta 2001 - 3rd Prize; Galati 1999 - Mention, Brasov 1998 - 2nd Prize}
+
+
+    \section{Languages}
+    \cvitemwithcomment{English}{full professional proficiency}{ILR scale}
+    \cvitemwithcomment{Romanian}{native language}{}
+    \cvitemwithcomment{German}{limited working proficiency}{"Deuthsches Sprachdimplom der KMK" - May 2004}
+
+
+    \section{Computer skills}
+    \cvdoubleitem{Programming Languages}{Python, Rust, Scala, NodeJS}{Linux Distros}{Apt: Debian, Ubuntu \newline Rpm: CentOS, RHEL}
+    \cvdoubleitem{Provisioning}{SaltStack, Ansible, Terraform}{Orchestration}{AWS, GCP}
+    \cvdoubleitem{Monitoring}{ELK Stack, Prometheus, Grafana}{CI/CD}{Jenkins, TravisCI, Concourse}
+    \cvitem{Virtualization}{Kubernetes, Docker, LXC}
+    \cvitem{Service Configuration}{\textit{Databases:} PostgreSQL, MySQL; \textit{Webservers:} Apache, nginx; \textit{Message Queues:} Redis, ZeroMQ, Kafka, SQS}
+    \cvitem{Networking}{TCP/IP stack, routing, OpenVPN, iptables, ufw, VPC Peering}
+    \cvitem{Monitoring}{ELK Stack, Prometheus, Alertmanager}
 
 \end{document}
 
