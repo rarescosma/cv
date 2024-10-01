@@ -1,8 +1,10 @@
+YEAR := $(shell date "+%Y")
+
 default:
-	xelatex rares-cv-2023.tex
+	xelatex rares-cv.tex
 
 clean:
 	rm -f *.aux *.log *.out *.pdf
 
 upload: default
-	scp rares-cv-2023.pdf vps:~/static/
+	scp rares-cv.pdf vps:~/static/rares-cv-$(YEAR).pdf
